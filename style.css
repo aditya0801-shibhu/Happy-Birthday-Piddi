@@ -9,55 +9,66 @@ body {
   overflow-x: hidden;
 }
 
+/* PANELS */
 .panel {
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
-  transition: opacity 0.6s ease-in-out;
   position: relative;
+  transition: opacity 0.6s ease-in-out;
 }
 
-/* IMAGES */
+/* Correct background paths from images folder */
 #img1 {
-  background-image: images/("1.jpg");
+  background-image: url("images/1.jpg");
 }
 #img2 {
-  background-image: images/("2.jpg");
+  background-image: url("images/2.jpg");
 }
 #img3 {
-  background-image: images/("3.jpg");
+  background-image: url("images/3.jpg");
 }
 
-/* TEXT BOXES */
-.text-box {
+/* IVORY TEXT AREA */
+.ivory-box {
   position: absolute;
-  bottom: 14%;
-  left: 8%;
-  max-width: 60%;
-  color: white;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 20px 25px;
   border-radius: 14px;
-  backdrop-filter: blur(4px);
+  width: 70%;
+  max-width: 330px;
+  backdrop-filter: blur(6px);
 }
 
-.text-box h2 {
+/* Positions */
+.ivory-box.left {
+  bottom: 12%;
+  left: 7%;
+}
+
+.ivory-box.center {
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ivory-box h2 {
   font-weight: 700;
   margin-bottom: 4px;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
-.text-box p {
-  line-height: 1.5;
+.ivory-box p {
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* BALLOON BUTTON */
 .balloon-btn {
   position: absolute;
-  bottom: 12%;
-  left: 8%;
+  bottom: 10%;
+  left: 10%;
   background: none;
   border: none;
   cursor: pointer;
@@ -66,28 +77,23 @@ body {
 .circle {
   width: 110px;
   height: 110px;
-  background: rgba(255, 255, 255, 0.28);
   border-radius: 50%;
-  position: relative;
-  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
-}
-
-.circle:hover {
-  transform: scale(1.07);
+  backdrop-filter: blur(4px);
+  position: relative;
 }
 
 .click-text {
-  font-size: 1.3rem;
   color: white;
+  font-size: 1.3rem;
   font-weight: 600;
   z-index: 2;
 }
 
-/* Balloons */
+/* Balloons Floating */
 .balloon {
   width: 14px;
   height: 18px;
@@ -99,21 +105,22 @@ body {
 }
 
 .balloon1 { left: 22px; bottom: 18px; animation-delay: 0s; }
-.balloon2 { right: 25px; bottom: 22px; animation-delay: 1s; }
+.balloon2 { right: 25px; bottom: 22px; animation-delay: 1.2s; }
 .balloon3 { left: 45px; top: 15px; animation-delay: 2s; }
 
 @keyframes float {
-  0% { transform: translateY(4px); }
+  0% { transform: translateY(3px); }
   50% { transform: translateY(-8px); }
-  100% { transform: translateY(4px); }
+  100% { transform: translateY(3px); }
 }
 
 /* POPUP */
 .popup {
   position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0; left: 0;
-  height: 100%; width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.55);
   display: none;
   justify-content: center;
   align-items: center;
@@ -121,31 +128,14 @@ body {
 
 .popup-box {
   background: white;
-  padding: 26px;
+  padding: 25px;
   width: 80%;
   max-width: 340px;
-  border-radius: 14px;
-  text-align: center;
-  animation: popIn 0.4s ease;
+  border-radius: 12px;
+  animation: show 0.35s ease;
 }
 
-@keyframes popIn {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+@keyframes show {
+  from { opacity: 0; transform: scale(0.75); }
+  to { opacity: 1; transform: scale(1); }
 }
-
-.popup-box h2 {
-  margin-bottom: 10px;
-  font-size: 1.6rem;
-}
-
-#closePopup {
-  margin-top: 16px;
-  padding: 8px 20px;
-  border: none;
-  background: #111;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
