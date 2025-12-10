@@ -1,34 +1,26 @@
-// Image list
-const images = [
-    "images/1.jpg",
-    "images/2.jpg",
-    "images/3.jpg",
-    "images/4.jpg",
-];
-
-const bg = document.getElementById("bg");
-
-let currentIndex = 0;
-
-// Initial background
-bg.style.backgroundImage = `url(${images[0]})`;
+// Smooth fade on scroll
+const panels = document.querySelectorAll(".panel");
 
 window.addEventListener("scroll", () => {
-    let scrollPosition = window.scrollY;
-    let sectionHeight = window.innerHeight;
+  const scrollY = window.scrollY;
+  const height = window.innerHeight;
 
-    let index = Math.floor(scrollPosition / sectionHeight);
-
-    if (index !== currentIndex && index < images.length) {
-        currentIndex = index;
-
-        bg.style.opacity = 0;
-
-        setTimeout(() => {
-            bg.style.backgroundImage = `url(${images[currentIndex]})`;
-            bg.style.opacity = 1;
-        }, 600);
-    }
+  panels.forEach((sec, index) => {
+    const sectionTop = index * height;
+    const opacity = 1 - Math.abs(scrollY - sectionTop) / height;
+    sec.style.opacity = Math.max(0, opacity);
+  });
 });
 
+// Popup
+const popup = document.getElementById("popup");
+const specialBtn = document.getElementById("specialBtn");
+const closePopup = document.getElementById("closePopup");
 
+specialBtn.addEventListener("click", () => {
+  popup.style.display = "flex";
+});
+
+closePopup.addEventListener("click", () => {
+  popup.style.display = "none";
+});
