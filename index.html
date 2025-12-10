@@ -5,62 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Birthday Surprise</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Classy aesthetic Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="container">
 
-    <!-- IMAGE 1 -->
-    <section class="panel" id="img1"></section>
+  <!-- SECTION 1 -->
+  <section class="panel" id="img1">
+    <!-- intentionally empty (no text here) -->
+  </section>
 
-    <!-- IMAGE 2 -->
-    <section class="panel" id="img2">
-      <div class="text-box">
-        <h2>✨ A Small Wish For You ✨</h2>
-        <p>
-          May your birthday bring you moments that make you smile,  
-          and memories that stay warm forever.
-        </p>
+  <!-- SECTION 2 -->
+  <section class="panel" id="img2">
+    <div class="ivory-box left">
+      <h2>✨ A Small Wish For You ✨</h2>
+      <p>May your birthday bring you moments that make you smile and memories that stay warm forever.</p>
+    </div>
+
+    <button id="specialBtn" class="balloon-btn">
+      <div class="circle">
+        <span class="balloon balloon1"></span>
+        <span class="balloon balloon2"></span>
+        <span class="balloon balloon3"></span>
+        <span class="click-text">Click</span>
       </div>
+    </button>
+  </section>
 
-      <!-- Balloon Button -->
-      <button id="specialBtn" class="balloon-btn">
-        <div class="circle">
-          <span class="balloon balloon1"></span>
-          <span class="balloon balloon2"></span>
-          <span class="balloon balloon3"></span>
-          <span class="click-text">Click</span>
-        </div>
-      </button>
-    </section>
+  <!-- SECTION 3 -->
+  <section class="panel" id="img3">
+    <div class="ivory-box center">
+      <h2>💛 Warmest Birthday Wishes 💛</h2>
+      <p>Wishing you joy, peace, and the happiest moments today. May this year be full of clarity and beautiful surprises.</p>
+    </div>
+  </section>
 
-    <!-- IMAGE 3 -->
-    <section class="panel" id="img3">
-      <div class="text-box">
-        <h2>💛 Warmest Birthday Wishes 💛</h2>
-        <p>
-          Wishing you joy, peace, and the happiest moments today.  
-          May this year be full of growth, clarity, and beautiful surprises.
-        </p>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Popup -->
+  <!-- POPUP -->
   <div id="popup" class="popup">
     <div class="popup-box">
       <h2>🎉 Happy Birthday! 🎉</h2>
-      <p>
-        You deserve all the brightness this world can offer.  
-        Keep shining, keep smiling — today belongs to you. ✨
-      </p>
+      <p>You deserve all the brightness this world can offer. Keep shining — today is made for you.</p>
       <button id="closePopup">Close</button>
     </div>
   </div>
