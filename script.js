@@ -1,18 +1,18 @@
-// Smooth fade on scroll
-const panels = document.querySelectorAll(".panel");
+// Smooth opacity based scroll transition
+const sections = document.querySelectorAll(".panel");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
   const height = window.innerHeight;
 
-  panels.forEach((sec, index) => {
-    const sectionTop = index * height;
-    const opacity = 1 - Math.abs(scrollY - sectionTop) / height;
+  sections.forEach((sec, i) => {
+    const pos = i * height;
+    const opacity = 1 - Math.abs(scrollY - pos) / height;
     sec.style.opacity = Math.max(0, opacity);
   });
 });
 
-// Popup
+// POPUP OPEN + CLOSE
 const popup = document.getElementById("popup");
 const specialBtn = document.getElementById("specialBtn");
 const closePopup = document.getElementById("closePopup");
