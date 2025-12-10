@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Surprise</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Classy aesthetic Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
+  <div id="container">
 
-    <div id="bg"></div>
+    <!-- IMAGE 1 -->
+    <section class="panel" id="img1"></section>
 
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
-    <div class="section"></div>
+    <!-- IMAGE 2 -->
+    <section class="panel" id="img2">
+      <div class="text-box">
+        <h2>✨ A Small Wish For You ✨</h2>
+        <p>
+          May your birthday bring you moments that make you smile,  
+          and memories that stay warm forever.
+        </p>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Balloon Button -->
+      <button id="specialBtn" class="balloon-btn">
+        <div class="circle">
+          <span class="balloon balloon1"></span>
+          <span class="balloon balloon2"></span>
+          <span class="balloon balloon3"></span>
+          <span class="click-text">Click</span>
+        </div>
+      </button>
+    </section>
+
+    <!-- IMAGE 3 -->
+    <section class="panel" id="img3">
+      <div class="text-box">
+        <h2>💛 Warmest Birthday Wishes 💛</h2>
+        <p>
+          Wishing you joy, peace, and the happiest moments today.  
+          May this year be full of growth, clarity, and beautiful surprises.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <h2>🎉 Happy Birthday! 🎉</h2>
+      <p>
+        You deserve all the brightness this world can offer.  
+        Keep shining, keep smiling — today belongs to you. ✨
+      </p>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
