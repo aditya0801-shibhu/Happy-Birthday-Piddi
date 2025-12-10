@@ -20,13 +20,13 @@ body {
 
 /* IMAGES */
 #img1 {
-  background-image: url("1.jpg");
+  background-image: images/("1.jpg");
 }
 #img2 {
-  background-image: url("2.jpg");
+  background-image: images/("2.jpg");
 }
 #img3 {
-  background-image: url("3.jpg");
+  background-image: images/("3.jpg");
 }
 
 /* TEXT BOXES */
@@ -148,3 +148,4 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
