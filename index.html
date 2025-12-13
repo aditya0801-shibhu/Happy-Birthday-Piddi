@@ -1,56 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday Surprise</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Section 1 (No text) -->
-    <section class="panel panel1">
-    </section>
+  <!-- SECTION 1 -->
+  <section class="panel" id="img1">
+    <!-- intentionally empty (no text here) -->
+  </section>
 
-    <!-- Section 2 (WISH + HEART BUTTON) -->
-    <section class="panel panel2">
-
-        <div class="wish-box">
-            <h1 class="wish-text">✨ Wish ✨</h1>
-        </div>
-
-        <button class="heart-btn" id="openMsg">
-            <span>Click</span>
-        </button>
-
-    </section>
-
-    <!-- Section 3 (Bottom wishes) -->
-    <section class="panel panel3">
-
-        <div class="final-wish">
-            <h2>✨ Birthday Wishes ✨</h2>
-            <p>May your day be filled with softness,<br>
-               warm happiness, and tiny magical moments<br>
-               that make your heart smile✨</p>
-        </div>
-
-    </section>
-
-    <!-- Popup -->
-    <div class="popup" id="popup">
-        <div class="popup-card">
-            <h2>💛 For You 💛</h2>
-            <p>
-                On your special day…<br>
-                I hope the universe wraps you in warmth,<br>
-                joy, comfort & little moments that feel like magic ❣️<br><br>
-                You deserve the softest happiness ✨
-            </p>
-            <button id="closePopup" class="close-btn">Close</button>
-        </div>
+  <!-- SECTION 2 -->
+  <section class="panel" id="img2">
+    <div class="ivory-box left">
+      <h2>✨ A Small Wish For You ✨</h2>
+      <p>May your birthday bring you moments that make you smile and memories that stay warm forever.</p>
     </div>
 
-<script src="script.js"></script>
+    <button id="specialBtn" class="balloon-btn">
+      <div class="circle">
+        <span class="balloon balloon1"></span>
+        <span class="balloon balloon2"></span>
+        <span class="balloon balloon3"></span>
+        <span class="click-text">Click</span>
+      </div>
+    </button>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="panel" id="img3">
+    <div class="ivory-box center">
+      <h2>💛 Warmest Birthday Wishes 💛</h2>
+      <p>Wishing you joy, peace, and the happiest moments today. May this year be full of clarity and beautiful surprises.</p>
+    </div>
+  </section>
+
+  <!-- POPUP -->
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <h2>🎉 Happy Birthday! 🎉</h2>
+      <p>You deserve all the brightness this world can offer. Keep shining — today is made for you.</p>
+      <button id="closePopup">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
