@@ -1,26 +1,20 @@
-// Smooth opacity based scroll transition
-const sections = document.querySelectorAll(".panel");
+const panels = document.querySelectorAll(".panel");
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  const height = window.innerHeight;
+function handleScroll() {
+  panels.forEach(panel => {
+    const rect = panel.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  sections.forEach((sec, i) => {
-    const pos = i * height;
-    const opacity = 1 - Math.abs(scrollY - pos) / height;
-    sec.style.opacity = Math.max(0, opacity);
+    // panel ka center viewport ke kitna paas hai
+    const distanceFromCenter =
+      Math.abs(rect.top + rect.height / 2 - windowHeight / 2);
+
+    let opacity = 1 - distanceFromCenter / (windowHeight / 2);
+    opacity = Math.max(0, Math.min(1, opacity));
+
+    panel.style.opacity = opacity;
   });
-});
+}
 
-// POPUP OPEN + CLOSE
-const popup = document.getElementById("popup");
-const specialBtn = document.getElementById("specialBtn");
-const closePopup = document.getElementById("closePopup");
-
-specialBtn.addEventListener("click", () => {
-  popup.style.display = "flex";
-});
-
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
-});
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);
